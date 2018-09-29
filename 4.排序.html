@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//冒泡排序/选择排序/快速排序
+	//1.冒泡排序
+	//冒泡排序（Bubble Sort），是一种计算机科学领域的较简单的排序算法。
+	//原理：
+	//1.比较相邻的元素。如果第一个比第二个大，就交换他们两个。
+	//2.对每一对相邻元素做同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。
+	//3.针对所有的元素重复以上的步骤，除了最后一个。
+	//4.持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。
+	/*var time=0;
+	var arr=[91,25,100,2,690,70,42,3,88,-25];
+	for(var i=0;i<arr.length;i++){
+		for(var j=0;j<arr.length;j++){
+			if(arr[i]<arr[j]){
+				var temp=arr[i];
+				arr[i]=arr[j];
+				arr[j]=temp;
+			}
+			time++;
+		}
+	}
+	console.log(arr);// [-25, 2, 3, 25, 42, 70, 88, 91, 100, 690]
+	console.log(time);//100*/
+	/*var time=0;
+	var arr=[91,25,100,2,690,70,42,3,88,-25];
+	for(var i=0;i<arr.length-1;i++){//-1：每一轮会比较出一个最大的数字
+		for(var j=0;j<arr.length-i-1;j++){
+		//两两比较  -1：两两比较的次数比数组的长度少1
+		//-i:每一轮排序循环会排序好一个数字。
+			if(arr[j]>arr[j+1]){
+				var temp=arr[j];
+				arr[j]=arr[j+1];
+				arr[j+1]=temp;
+			}
+			time++;
+		}
+	}
+	console.log(arr);
+	console.log(time);//45*/
+
+
+	//2.选择排序
+	//选择排序（Selection sort）是一种简单直观的排序算法。它的工作原理是每一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。 选择排序是不稳定的排序方法。
+	/*var arr=[-91,25,100,2,690,70,42,-3,88,-25];
+	for(var i=0;i<arr.length;i++){
+		var minindex=i;//假设的最小值的索引位置。
+		var minvalue=arr[i];//假设的最小值
+		for(var j=i+1;j<arr.length;j++){
+			if(minvalue>arr[j]){//如果当前的值比我最小值还要小，当前的值就是最小值。
+				minvalue=arr[j];//最小值
+				minindex=j;//最小索引，最小值的位置
+			}
+		}
+
+		//通过上面的循环，找到最小值的位置，和假设进行交换。
+		var temp=arr[i];
+		arr[i]=arr[minindex];
+		arr[minindex]=temp;
+
+	}
+
+	console.log(arr);*/
+
+	/*var arr=[-91,25,100,2,690,70,42,-3,88,-25];
+	for(var i=0;i<arr.length;i++){
+		var minindex=i;//假设的最小值的索引位置。
+		var minvalue=arr[i];//假设的最小值
+		for(var j=i+1;j<arr.length;j++){
+			if(minvalue>arr[j]){//如果当前的值比我最小值还要小，当前的值就是最小值。
+				minvalue=arr[j];//最小值
+				minindex=j;//最小索引，最小值的位置
+			}
+		}
+
+		//通过上面的循环，找到最小值的位置，和假设进行交换。
+		//防止假设的真的就是最小值。
+		if(i!=minindex){
+			var temp=arr[i];
+			arr[i]=arr[minindex];
+			arr[minindex]=temp;
+		}
+	}
+
+	console.log(arr);*/
+	</script>
+</body>
+</html>
